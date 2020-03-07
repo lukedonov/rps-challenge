@@ -6,7 +6,7 @@ describe Game do
 
   it 'returns player move' do
     allow(subject).to receive(:random_move).and_return("Rock")
-    expect(subject.computer_move).to eq "Computer used Rock"
+    expect(subject.random_move).to eq "Rock"
   end
 end
 

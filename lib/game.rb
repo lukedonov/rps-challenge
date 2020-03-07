@@ -5,15 +5,10 @@ class Game
   def initialize(player)
     @player = player
     @moves = ['Rock', 'Paper', 'Scissors']
-    @random_move = nil
   end
 
   def move(player_move)
     player_move
-  end
-
-  def computer_move
-    "Computer used " + random_move
   end
 
   def random_move
