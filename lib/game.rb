@@ -1,10 +1,11 @@
 
 class Game
-  attr_reader :player, :moves
+  attr_reader :player, :moves, :random_move
 
   def initialize(player)
     @player = player
     @moves = ['Rock', 'Paper', 'Scissors']
+    @random_move = nil
   end
 
   def move(player_move)
@@ -12,6 +13,10 @@ class Game
   end
 
   def computer_move
-    "Computer used Rock"
+    "Computer used " + random_move
+  end
+
+  def random_move
+    @random_move = ['Rock','Paper','Scissors'].sample
   end
 end
