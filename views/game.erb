@@ -3,7 +3,7 @@
 <body>
   <div>
   <link rel='stylesheet' href='/style.css'>
-  <h1>Hello <%= @player %></h1>
+  <h1>Hello <%= @game.player.name %></h1>
   <h2> Pick a move </h2>
   <form action='/play'>
     <input class='button' name="player_move" type='submit' value = 'Rock' >

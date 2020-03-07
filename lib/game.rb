@@ -10,4 +10,8 @@ class Game
   def move(player_move)
     player_move
   end
+
+  def computer_move
+    "Computer used Rock"
+  end
 end
