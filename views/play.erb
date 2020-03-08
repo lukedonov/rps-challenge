@@ -1,3 +1,37 @@
+<% @computer = @game.random_move %>
+
 <%= @game.player.name %> used <%= @move %>
 <br>
-Computer used <%= @game.random_move %>
+Computer used <%= @computer %>
+<br>
+
+<% if @move == "Rock" %>
+<%    if @computer == "Scissors"  %>
+<%=   "You win!" %>
+<%    elsif @computer == "Rock"  %>
+<%=   "It's a draw! " %>
+<%    elsif @computer == "Paper" %>
+<%=   "You lose!" %>
+<%    end %>
+<% elsif @move == "Paper" %>
+<%    if @computer == "Scissors"  %>
+<%=   "You lose!" %>
+<%    elsif @computer == "Paper"  %>
+<%=   "It's a draw! " %>
+<%    elsif @computer == "Rock" %>
+<%=   "You win!" %>
+<%    end %>
+<% elsif @move == "Scissors" %>
+<%    if @computer == "Rock"  %>
+<%=   "You lose!" %>
+<%    elsif @computer == "Scissors"  %>
+<%=   "It's a draw! " %>
+<%    elsif @computer == "Paper" %>
+<%=   "You win!" %>
+<%    end %>
+<% end %>
+
+
+<a href="/game">
+  Play again
+</a>

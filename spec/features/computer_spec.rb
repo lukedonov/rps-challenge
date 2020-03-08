@@ -4,6 +4,6 @@ feature 'computer' do
       fill_in :player1 , with: "Luke"
       click_button "Submit"
       click_button "Rock"
-      expect(page).to have_content 'Computer used Rock'
+      expect(page).to have_content 'Computer used'
   end
 end
