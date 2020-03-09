@@ -1,17 +1,14 @@
 feature "pick move" do 
   scenario "pick rock paper or scissors" do 
     visit ("/")
-    fill_in :player1 , with: "Luke"
-    click_button "Submit"
-    click_button "Rock"
+    single_player_sign_in
     expect(page).to have_content 'Luke used Rock'
   end
 
   scenario "pick rock paper or scissors" do 
-    visit ("/")
-    fill_in :player1 , with: "Luke"
-    click_button "Submit"
-    click_button "Paper"
-    expect(page).to have_content 'Luke used Paper'
+    visit ("/index1")
+    two_player
+    expect(page).to have_content 'Luke used Rock'
   end
 end
+

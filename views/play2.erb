@@ -1,0 +1,24 @@
+<%= @games.player.name%> used <%= @p1move %>
+<br>
+<%= @games.player2.name%> used <%= @p2move %>
+<br>
+<%= "It's a draw!" if @p1move == @p2move %>
+<% if @p1move == "Rock" %>
+<%    if @p2move == "Scissors" %>
+<%=     @games.player.name + " wins!"%>
+<%    elsif @p2move == "Paper" %>
+<%=     @games.player.name + " loses!"%>
+<%    end %>
+<% elsif @p1move == "Scissors" %>
+<%    if @p2move == "Paper" %>
+<%=     @games.player.name + " wins!"%>
+<%    elsif @p2move == "Rock" %>
+<%=     @games.player.name + " loses!"%>
+<%    end %> %>
+<% elsif @p1move == "Paper" %>
+<%    if @p2move == "Rock" %>
+<%=     @games.player.name + " wins!"%>
+<%    elsif @p2move == "Scissors" %>
+<%=     @games.player.name + " loses!"%>
+<%    end %>
+<% end %>

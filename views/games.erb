@@ -1,0 +1,12 @@
+<%= @games.player.name%> vs <%= @games.player2.name%>
+<h2><%= @games.player.name%>'s Turn:</h2>
+<form action='/games2'>
+  <input class='button' name="player1_move" type='submit' value = 'Rock' >
+</form>
+<form action='/games2'>
+  <input class='button' name="player1_move" type='submit' value = 'Paper' >
+</form>
+<form action='/games2'>
+  <input class='button' name="player1_move" type='submit' value = 'Scissors' >
+</form>
+

@@ -1,8 +1,7 @@
-
 feature "entering your name" do 
   scenario "enter and return your name" do
     visit ("/")
-    submit_name
-    expect(page).to have_content "Hello Luke"
+    two_player_sign_in
+    expect(page).to have_content "Luke vs Tom"
   end
 end
